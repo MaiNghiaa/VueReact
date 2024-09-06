@@ -119,6 +119,16 @@
         <p class="alert alert-success">Họ và tên: {{getfullname}}</p>
         <p class="alert alert-success">Họ và tên: {{fullname}}</p>
       </section>
+      <section
+        id="styling"
+        class="bg-dark p-3 rounded text-center text-white mb-3"
+      >
+        <h2>Styling</h2>
+
+        <hr />
+
+        <p :style="{color: color, backgroundColor: bgColor}">My component</p>
+      </section>
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 

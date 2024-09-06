@@ -137,3 +137,12 @@ Vue.createApp({
     },
   },
 }).mount("#Computed-and-Watchers");
+
+Vue.createApp({
+  data() {
+    return {
+      color: "yellow",
+      bgColor: "red",
+    };
+  },
+}).mount("#styling");
