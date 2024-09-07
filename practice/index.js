@@ -146,3 +146,34 @@ Vue.createApp({
     };
   },
 }).mount("#styling");
+
+Vue.createApp({
+  data() {
+    return {
+      isLogin: false,
+      minion: [
+        {
+          name: "Minion 1",
+          img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPKCFXqjD0JCJJoAmQgz6cd2hhQ5rhzXUKrg&s",
+        },
+        {
+          name: "Minion 2",
+          img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPKCFXqjD0JCJJoAmQgz6cd2hhQ5rhzXUKrg&s",
+        },
+        {
+          name: "Minion 3",
+          img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPKCFXqjD0JCJJoAmQgz6cd2hhQ5rhzXUKrg&s",
+        },
+        {
+          name: "Minion 4",
+          img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPKCFXqjD0JCJJoAmQgz6cd2hhQ5rhzXUKrg&s",
+        },
+      ],
+    };
+  },
+  methods: {
+    handleClick() {
+      this.isLogin = !this.isLogin;
+    },
+  },
+}).mount("#directive");

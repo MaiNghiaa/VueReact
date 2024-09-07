@@ -129,7 +129,41 @@
 
         <p :style="{color: color, backgroundColor: bgColor}">My component</p>
       </section>
+      <section
+        id="directive"
+        class="bg-dark p-3 rounded text-center text-white mb-3"
+      >
+        <h2>directive - condition</h2>
+
+        <hr />
+        <div>
+          <p v-if="isLogin" class="alert alert-success">Mai Trung Nghĩa</p>
+          <button v-if="!isLogin" class="btn btn-info" @click="handleClick">
+            Login
+          </button>
+          <button v-if="isLogin" class="btn btn-info" @click="handleClick">
+            Logout
+          </button>
+        </div>
+        <div>
+          <h3>List Rendering</h3>
+          <div>
+            <ul style="list-style: none">
+              <li
+                v-for="(item,index) in minion"
+                class="d-flex align-items-center justify-content-around"
+                :key=""
+              >
+                <p>{{index + 1}}</p>
+                <img :src="item.img" class="img-thumbnail w-50" alt="" />
+                <h2>{{item.name}}</h2>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
     </div>
+
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
     <script
